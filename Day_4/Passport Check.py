@@ -57,13 +57,14 @@ def full_validation(passport):
                 validate_eye(passport['ecl']),
                 validate_pid(passport['pid'])])
 
-def solve_a(passports):
+def part_1(passports):
     return len([passport for passport in passports if has_fields(passport)])
 
-def solve_b(passports):
+def part_2(passports):
     return len([passport for passport in passports if full_validation(passport)])
 
 passports = parse_passports(data)
 
-print(solve_a(passports))
-print(solve_b(passports))
+print(part_1(passports))
+
+print(part_2(passports))
