@@ -1,10 +1,12 @@
 with open('Day_5/input.txt', 'r') as f:
     tickets = [ticket.strip() for ticket in f.readlines()]
 
+
 def seat_id(ticket):
     row = int(ticket[0:7].replace('F', '0').replace('B', '1'), 2)
     seat = int(ticket[7:].replace('L', '0').replace('R', '1'), 2)
     return row, seat
+
 
 rows_columns = [seat_id(ticket) for ticket in tickets]
 

@@ -4,5 +4,6 @@ from math import prod
 
 with open('Day_1/input.txt', 'r') as f:
     data = f.read().splitlines()
-    
-print(next(prod(x) for x in combinations([int(x) for x in data], 2) if sum(x) == 2020))
+
+print(next(prod(x)
+           for x in combinations([int(x) for x in data], 2) if sum(x) == 2020))

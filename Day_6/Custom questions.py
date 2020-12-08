@@ -1,5 +1,6 @@
 with open('Day_6/input.txt', 'r') as f:
-    data = [list(map(set, group.splitlines())) for group in f.read().split('\n\n')]
+    data = [list(map(set, group.splitlines()))
+            for group in f.read().split('\n\n')]
 
 yes = 0
 yes_all = 0
